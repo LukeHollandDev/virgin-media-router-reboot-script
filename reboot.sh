@@ -28,6 +28,7 @@ reboot_response=$(curl -s -X POST -H "Content-Type: application/json" -H "Author
 # Check if reboot request was successful
 if [ $? -ne 0 ]; then
    echo "Reboot request failed. Please try again."
+   echo "Reboot response: $reboot_response"
    exit 1
 fi
 
